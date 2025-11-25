@@ -44,46 +44,24 @@ namespace pizzarendelo
 
 		private void btn_rendel_Click(object sender, RoutedEventArgs e)
 		{
-			List<string> feltet = new List<string>();
-			string atvet = "";
-			bool validFeltet = false;
-			bool validAtvet = false;
-			if (lb_teszta.SelectedItem != null || cb_meret.SelectedItem != null)
-			{
-				foreach (var item in sp_feltet.Children)
-				{
-					if (item is CheckBox cb && cb.IsChecked == true)
-					{
-						validFeltet = true;
-						feltet.Add(atvet);
-					}
-				}
-				foreach (var item in sp_atvetel.Children)
-				{
-					if (item is CheckBox cb && cb.IsChecked == true)
-					{
-						validAtvet = true;
-						atvet = item.ToString();
-					}
-				}
-				if (validFeltet && validAtvet)
-				{
-					Pizza pizza = new Pizza(lb_teszta.SelectedItem.ToString(), cb_meret.SelectedItem.ToString(), feltet, atvet);
-					rendelesek.Add(pizza);
-					foreach (var item in rendelesek)
-					{
-						lb_rendeles.Content += item.ToString();
-					}
-				}
-				else
-				{
-					MessageBox.Show("Hibás adatok");
-				}
-			}
-			else
-			{
-				MessageBox.Show("Hibás adatok");
-			}
+            List<string> feltetek = new List<string>();
+            string atvet = "";
+            foreach (var item in sp_feltet.Children)
+            {
+                if (item is CheckBox cb && cb.IsChecked == true)
+                {
+                    feltetek.Add(cb.Content.ToString());
+                }
+            }
+            foreach (var item in sp_atvetel.Children)
+            {
+                if (item is RadioButton rb && rb.IsChecked == true)
+                {
+                    atvet = rb.Content.ToString();
+                }
+            }
+            Pizza newPizza = new Pizza(lb_teszta.SelectedItem.ToString(), cb_meret.SelectedItem.ToString(), feltetek, atvet);
+            lb_rendeles.Text = newPizza.ToString();
 		}
 	}
 }

@@ -18,7 +18,7 @@
 		</Grid.ColumnDefinitions>
 
 		<Label Content="Tészta" FontFamily="Cooper Black" FontSize="36" Grid.Row="0" Grid.Column="0" Background="Red"/>
-		<ListBox x:Name="lb_teszta" Grid.Row="0" Grid.Column="0" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,50,0,0" FontFamily="Times New Roman" FontSize="20" Background="#FFDDDDDD" />
+		<ListBox x:Name="lb_teszta" Grid.Row="0" Grid.Column="0" Margin="0,50,0,0" FontFamily="Times New Roman" FontSize="20" Background="#FFDDDDDD" />
 
 		<Label Content="Méret" FontFamily="Cooper Black" FontSize="36" Grid.Row="0" Grid.Column="1" Background="White"/>
 		<ComboBox x:Name="cb_meret" Grid.Row="0" Grid.Column="1" FontFamily="Times New Roman" Margin="0,50,0,0" FontSize="20" Background="#FFDDDDDD" />
@@ -41,6 +41,6 @@
 		<Button x:Name="btn_rendel" Content="Rendel" Grid.Column="1" Grid.Row="1" FontSize="36" FontFamily="Cooper Black" Click="btn_rendel_Click" />
 		
 		<Label Content="Rendelés" Grid.Column="2" Grid.Row="1" FontSize="36" FontFamily="Cooper Black" Background="Green"/>
-		<Label x:Name="lb_rendeles" Grid.Column="2" Grid.Row="1" FontSize="36" FontFamily="Cooper Black" Background="#FFDDDDDD" Margin="0,50,0,0"/>
+		<TextBlock TextWrapping="WrapWithOverflow" x:Name="lb_rendeles" Grid.Column="2" Grid.Row="1" FontSize="20" FontFamily="Times New Roman" Background="#FFDDDDDD" Margin="0,50,0,0" />
 	</Grid>
 </Window>
