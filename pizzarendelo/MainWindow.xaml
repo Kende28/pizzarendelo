@@ -39,5 +39,8 @@
 		</StackPanel>
 
 		<Button x:Name="btn_rendel" Content="Rendel" Grid.Column="1" Grid.Row="1" FontSize="36" FontFamily="Cooper Black" Click="btn_rendel_Click" />
+		
+		<Label Content="Rendelés" Grid.Column="2" Grid.Row="1" FontSize="36" FontFamily="Cooper Black" Background="Green"/>
+		<Label x:Name="lb_rendeles" Grid.Column="2" Grid.Row="1" FontSize="36" FontFamily="Cooper Black" Background="#FFDDDDDD" Margin="0,50,0,0"/>
 	</Grid>
 </Window>
