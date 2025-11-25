@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:pizzarendelo"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+	<Grid>
 		<Grid.RowDefinitions>
 			<RowDefinition Height="*"/>
 			<RowDefinition Height="*"/>
@@ -16,8 +16,25 @@
 			<ColumnDefinition Width="*"/>
 			<ColumnDefinition Width="*"/>
 		</Grid.ColumnDefinitions>
-		<Label Content="Tészta" FontFamily="Cooper Black" FontSize="36"/>
-		<ListBox x:Name="lb_teszta" Grid.Row="0" Grid.Column="0" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,50,0,0"/>
 
+		<Label Content="Tészta" FontFamily="Cooper Black" FontSize="36" Grid.Row="0" Grid.Column="0"/>
+		<ListBox x:Name="lb_teszta" Grid.Row="0" Grid.Column="0" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,50,0,0" FontFamily="Times New Roman" FontSize="20"/>
+
+		<Label Content="Méret" FontFamily="Cooper Black" FontSize="36" Grid.Row="0" Grid.Column="1"/>
+		<ComboBox x:Name="cb_meret" Grid.Row="0" Grid.Column="1" FontFamily="Times New Roman" Margin="0,50,0,120" FontSize="20"/>
+
+		<Label Content="Feltétek" FontFamily="Cooper Black" FontSize="36" Grid.Row="0" Grid.Column="2"/>
+		<StackPanel x:Name="sp_feltet" Grid.Row="0" Grid.Column="2" Margin="0,50,0,0">
+			<CheckBox x:Name="cb_sajt" Content="sajt"/>
+			<CheckBox x:Name="cb_sonka" Content="sonka"/>
+			<CheckBox x:Name="cb_gomba" Content="gomba"/>
+			<CheckBox x:Name="cb_oliva" Content="olivabogyó"/>
+			<CheckBox x:Name="cb_kukorica" Content="kukorica"/>
+		</StackPanel>
+
+		<Label Content="Átvétel" FontFamily="Cooper Black" FontSize="36" Grid.Row="1" Grid.Column="0"/>
+		<StackPanel x:Name="">
+			
+		</StackPanel>
 	</Grid>
 </Window>

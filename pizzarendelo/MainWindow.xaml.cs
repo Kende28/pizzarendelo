@@ -22,10 +22,23 @@ namespace pizzarendelo
             "Normál",
 			"Extra vastag"
 		};
+        List<string> meretek = new List<string>()
+        {
+            "Kicsi",
+            "Közepes",
+            "Nagy"
+        };
 		public MainWindow()
         {
             InitializeComponent();
-            lb_teszta.ItemsSource = tesztak;
+		    PizzaUIBetoltes();
+		}
+
+        private void PizzaUIBetoltes()
+        {
+			lb_teszta.ItemsSource = tesztak;
+            cb_meret.ItemsSource = meretek;
+            cb_meret.Text = meretek[0];
 		}
     }
 }
