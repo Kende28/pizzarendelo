@@ -7,6 +7,17 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*"/>
+			<ColumnDefinition Width="*"/>
+			<ColumnDefinition Width="*"/>
+		</Grid.ColumnDefinitions>
+		<Label Content="Tészta" FontFamily="Cooper Black" FontSize="36"/>
+		<ListBox x:Name="lb_teszta" Grid.Row="0" Grid.Column="0" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,50,0,0"/>
 
-    </Grid>
+	</Grid>
 </Window>

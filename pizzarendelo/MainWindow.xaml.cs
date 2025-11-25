@@ -16,9 +16,16 @@ namespace pizzarendelo
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        List<string> tesztak = new List<string>()
+        {
+            "Vékony",
+            "Normál",
+			"Extra vastag"
+		};
+		public MainWindow()
         {
             InitializeComponent();
-        }
+            lb_teszta.ItemsSource = tesztak;
+		}
     }
 }
