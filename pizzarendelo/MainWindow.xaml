@@ -17,24 +17,27 @@
 			<ColumnDefinition Width="*"/>
 		</Grid.ColumnDefinitions>
 
-		<Label Content="Tészta" FontFamily="Cooper Black" FontSize="36" Grid.Row="0" Grid.Column="0"/>
-		<ListBox x:Name="lb_teszta" Grid.Row="0" Grid.Column="0" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,50,0,0" FontFamily="Times New Roman" FontSize="20"/>
+		<Label Content="Tészta" FontFamily="Cooper Black" FontSize="36" Grid.Row="0" Grid.Column="0" Background="Red"/>
+		<ListBox x:Name="lb_teszta" Grid.Row="0" Grid.Column="0" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,50,0,0" FontFamily="Times New Roman" FontSize="20" Background="#FFDDDDDD" />
 
-		<Label Content="Méret" FontFamily="Cooper Black" FontSize="36" Grid.Row="0" Grid.Column="1"/>
-		<ComboBox x:Name="cb_meret" Grid.Row="0" Grid.Column="1" FontFamily="Times New Roman" Margin="0,50,0,120" FontSize="20"/>
+		<Label Content="Méret" FontFamily="Cooper Black" FontSize="36" Grid.Row="0" Grid.Column="1" Background="White"/>
+		<ComboBox x:Name="cb_meret" Grid.Row="0" Grid.Column="1" FontFamily="Times New Roman" Margin="0,50,0,0" FontSize="20" Background="#FFDDDDDD" />
 
-		<Label Content="Feltétek" FontFamily="Cooper Black" FontSize="36" Grid.Row="0" Grid.Column="2"/>
-		<StackPanel x:Name="sp_feltet" Grid.Row="0" Grid.Column="2" Margin="0,50,0,0">
-			<CheckBox x:Name="cb_sajt" Content="sajt"/>
-			<CheckBox x:Name="cb_sonka" Content="sonka"/>
-			<CheckBox x:Name="cb_gomba" Content="gomba"/>
-			<CheckBox x:Name="cb_oliva" Content="olivabogyó"/>
-			<CheckBox x:Name="cb_kukorica" Content="kukorica"/>
+		<Label Content="Feltétek" FontFamily="Cooper Black" FontSize="36" Grid.Row="0" Grid.Column="2" Background="Green"/>
+		<StackPanel x:Name="sp_feltet" Grid.Row="0" Grid.Column="2" Margin="0,50,0,0" Background="#FFDDDDDD">
+			<CheckBox x:Name="cb_sajt" Content="Sajt" FontSize="20" FontFamily="Times New Roman"/>
+			<CheckBox x:Name="cb_sonka" Content="Sonka" FontSize="20" FontFamily="Times New Roman"/>
+			<CheckBox x:Name="cb_gomba" Content="Gomba" FontSize="20" FontFamily="Times New Roman"/>
+			<CheckBox x:Name="cb_oliva" Content="Olivabogyó" FontSize="20" FontFamily="Times New Roman"/>
+			<CheckBox x:Name="cb_kukorica" Content="Kukorica" FontSize="20" FontFamily="Times New Roman"/>
 		</StackPanel>
 
-		<Label Content="Átvétel" FontFamily="Cooper Black" FontSize="36" Grid.Row="1" Grid.Column="0"/>
-		<StackPanel x:Name="">
-			
+		<Label Content="Átvétel" FontFamily="Cooper Black" FontSize="36" Grid.Row="1" Grid.Column="0" Background="Red"/>
+		<StackPanel x:Name="sp_atvetel" Grid.Row="1" Grid.Column="0" Margin="0,50,0,0" Background="#FFDDDDDD">
+			<RadioButton Content="Házhozszállítás" FontFamily="Times New Roman" FontSize="20"/>
+			<RadioButton Content="Személyes átvétel" FontFamily="Times New Roman" FontSize="20"/>
 		</StackPanel>
+
+		<Button x:Name="btn_rendel" Content="Rendel" Grid.Column="1" Grid.Row="1" FontSize="36" FontFamily="Cooper Black" Click="btn_rendel_Click" />
 	</Grid>
 </Window>

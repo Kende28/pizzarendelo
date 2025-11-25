@@ -16,7 +16,8 @@ namespace pizzarendelo
     /// </summary>
     public partial class MainWindow : Window
     {
-        List<string> tesztak = new List<string>()
+        List<Pizza> rendelesek = new List<Pizza>();
+		List<string> tesztak = new List<string>()
         {
             "Vékony",
             "Normál",
@@ -40,5 +41,32 @@ namespace pizzarendelo
             cb_meret.ItemsSource = meretek;
             cb_meret.Text = meretek[0];
 		}
-    }
+
+		private void btn_rendel_Click(object sender, RoutedEventArgs e)
+		{
+			bool validFeltet = false;
+			bool validAtvet = false;
+			if (lb_teszta.SelectedItem != null && cb_meret.SelectedItem != null )
+			{
+				foreach (var item in sp_feltet.Children)
+				{
+					if (item is CheckBox cb && cb.IsChecked == true)
+					{
+						validFeltet = true;
+					}
+				}
+				foreach (var item in sp_atvetel.Children)
+				{
+					if (item is CheckBox cb && cb.IsChecked == true)
+					{
+						validAtvet = true;
+					}
+				}
+				if (validFeltet && validAtvet)
+				{
+					
+				}
+			}
+		}
+	}
 }
